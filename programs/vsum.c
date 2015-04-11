@@ -4,19 +4,13 @@ int vsum(int *addr, int n) {
   int sum = 0;
   int i;
 
-  // Use while loop insted of this for loop
-  /* 
-  for (i = 0; i < n; i++) {
-    sum += *(addr+i);
-  }
-  */
-
   i = 0;
-  while (i < n) {
-    sum += *(addr+i);
-    i++;
-  }
-
+_L1:
+  if (i >= n) goto _L2;
+  sum += *(addr+i);
+  i++;
+  goto _L1;
+_L2:
   return sum;
 }
 
