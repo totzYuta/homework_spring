@@ -1,0 +1,10 @@
+int
+vsum(int *addr, int n) {
+    int sum = 0;
+    int i;
+
+    for (i = 0; i < n; i++) {
+        ______(1)______
+    }
+    return sum;
+}
